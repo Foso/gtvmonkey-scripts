@@ -12,3 +12,6 @@ Then it will append **main();** to the script, which will execute the main() of 
 The script will be outputed to <kbd>/build/distributions/$NAMEOFYOURGRADLEPROJECT.user.js</kbd>
 
 The gradle task will be triggered after every gradle **build** task
+
+### Metadata
+You can configure the metadata of your userscript inside <kbd>main/resources/metadata.txt</kbd>.
