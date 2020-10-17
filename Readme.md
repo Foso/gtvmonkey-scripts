@@ -15,3 +15,6 @@ The gradle task will be triggered after every gradle **build** task
 
 ### Metadata
 You can configure the metadata of your userscript inside [/src/main/resources/metadata.txt](https://github.com/Foso/gtvmonkey-scripts/blob/master/src/main/resources/metadata.txt)
+
+## Kotlin
+Write your Kotlin Code inside **src/main/kotlin**. The **main()** will be executed first by the userscript.
