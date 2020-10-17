@@ -39,7 +39,7 @@ kotlin {
 }
 
 
-task concatenate {
+task buildUserScript {
     doLast {
         def toConcatenate = files("./build/distributions/header.txt","./build/js/packages/${project.name}/kotlin-dce/kotlin.js", "./build/js/packages/${project.name}/kotlin/${project.name}.js")
         def outputFileName = "./build/distributions/${project.name}.user.js"
@@ -53,5 +53,5 @@ task concatenate {
     }
 }
 build{
-    finalizedBy(concatenate)
+    finalizedBy(buildUserScript)
 }
