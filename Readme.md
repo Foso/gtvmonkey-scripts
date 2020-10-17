@@ -2,6 +2,10 @@
 
 This a template project that helps you write Greasemonkey/Tampermonkey/ViolentMonkey scripts with KotlinJs
 
+### Show some :heart: and star the repo to support the project
+
+[![GitHub stars](https://img.shields.io/github/stars/Foso/gtvmonkey-scripts.svg?style=social&label=Star)](https://github.com/Foso/gtvmonkey-scripts) [![GitHub forks](https://img.shields.io/github/forks/Foso/gtvmonkey-scripts.svg?style=social&label=Fork)](https://github.com/Foso/gtvmonkey-scripts/fork)  [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_)
+
 ## How does it work?
 
 ### Gradle
