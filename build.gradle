@@ -48,7 +48,7 @@ task buildUserScript {
         def output = new File(outputFileName)
 
         output.write('') // truncate output if needed
-        toConcatenate.each { f -> output << f.text }
+        toConcatenate.each { f -> output << f.text+"\n" }
         output.append("\nmain();")
     }
 }
