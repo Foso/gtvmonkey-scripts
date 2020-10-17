@@ -14,4 +14,4 @@ The script will be outputed to <kbd>/build/distributions/$NAMEOFYOURGRADLEPROJEC
 The gradle task will be triggered after every gradle **build** task
 
 ### Metadata
-You can configure the metadata of your userscript inside <kbd>main/resources/metadata.txt</kbd>.
+You can configure the metadata of your userscript inside [/src/main/resources/metadata.txt](https://github.com/Foso/gtvmonkey-scripts/blob/master/src/main/resources/metadata.txt)
