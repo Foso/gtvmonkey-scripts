@@ -10,3 +10,5 @@ The task will concat the script metadata from **main/resources/metadata.txt**, t
 Then it will append **main();** to the script, which will execute the main() of your Kotlin Code.
 
 The script will be outputed to /build/distributions/$NAMEOFYOURGRADLEPROJECT.user.js
+
+The gradle task will be triggered after every gradle **build** task
