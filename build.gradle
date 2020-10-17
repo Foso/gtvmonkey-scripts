@@ -1,0 +1,57 @@
+plugins {
+    id 'org.jetbrains.kotlin.js' version '1.4.10'
+}
+group = 'me.jens'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url 'https://dl.bintray.com/kotlin/kotlinx'
+    }
+    maven {
+        url 'https://dl.bintray.com/kotlin/kotlin-js-wrappers'
+    }
+}
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test-js'
+
+}
+kotlin {
+    js {
+        browser {
+            binaries.executable()
+            webpackTask {
+                cssSupport.enabled = true
+            }
+            runTask {
+                cssSupport.enabled = true
+            }
+            testTask {
+                useKarma {
+                    useChromeHeadless()
+                    webpackConfig.cssSupport.enabled = true
+                }
+            }
+        }
+    }
+}
+
+
+task concatenate {
+    doLast {
+        def toConcatenate = files("./build/distributions/header.txt","./build/js/packages/${project.name}/kotlin-dce/kotlin.js", "./build/js/packages/${project.name}/kotlin/${project.name}.js")
+        def outputFileName = "./build/distributions/${project.name}.user.js"
+        def test = new File(outputFileName)
+        test.delete()
+        def output = new File(outputFileName)
+
+        output.write('') // truncate output if needed
+        toConcatenate.each { f -> output << f.text }
+        output.append("\nmain();")
+    }
+}
+build{
+    finalizedBy(concatenate)
+}
