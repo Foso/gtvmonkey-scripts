@@ -23,13 +23,29 @@ Write your Kotlin Code inside **src/main/kotlin**. The **main()** will be execut
 When you use **gradle -t build** inside your project folder, Gradle will detect all changes to your Kotlin Code and metadata.txt file, and will compile and generate a new userscript on every change. The detection of changes on the userscript depends on your used addon. E.g. Violentmonkey supports tracking of file changes in Chrome (https://violentmonkey.github.io/posts/how-to-edit-scripts-with-your-favorite-editor/) and it can detect changes on a new generated userscript.
 
 ## Example
+Let's create a script thats alerts "Hello Github" on every page of Github.
+
+Add this inside your /main/resources/metadata.txt
 
 ```kotlin
-fun main() {
-    helloWorld()
-}
+// ==UserScript==
+// @name        MyNew script - KotlinJs
+// @namespace   GtvMonkey Scripts
+// @grant       none
+// @version     1.0
+// @author      -
+// @description 10/16/2020, 9:43:07 PM
+// @include     https://github.com/*
+// ==/UserScript==
+```
+You can find out more about the Metadata section [HERE](https://wiki.greasespot.net/Metadata_Block)
 
-fun helloWorld() {
-    window.alert("Monkey say... \"Hello World!\"");
+This is your Kotlin Code
+```kotlin
+fun main() {
+    window.alert("Hello Github!")
 }
 ```
+
+Run the **build** task of Gradle and you will find a *.user.js inside /build/distributions.
+Add this file to your wanted userscript browser addon and you are done.
