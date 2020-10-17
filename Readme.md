@@ -18,3 +18,6 @@ You can configure the metadata of your userscript inside [/src/main/resources/me
 
 ## Kotlin
 Write your Kotlin Code inside **src/main/kotlin**. The **main()** will be executed first by the userscript.
+
+## Hot Reload
+When you use **gradle -t build** inside your project folder, gradle will detect all changes to your Kotlin Code and metadata.txt file, and will compile and generate a new userscript on every change. 
