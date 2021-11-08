@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        MyNew script - KotlinJs
 // @namespace   GtvMonkey Scripts
-// @grant       none
-// @version     1.0
+// @grant       GM.xmlHttpRequest
+// @version     1.1
 // @author      -
 // @description 10/16/2020, 9:43:07 PM
 // @include     *

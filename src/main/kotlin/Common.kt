@@ -1,13 +1,16 @@
+
 import kotlinx.browser.document
 import kotlinx.browser.window
 import org.w3c.dom.HTMLElement
 import org.w3c.dom.get
+
 
 fun main() {
     helloWorld()
    // hideImages()
    // floatingMenu()
 }
+
 
 fun floatingMenu() {
     //A Greasemonkey script that finds h2 tags and creates a floating menu of them.
