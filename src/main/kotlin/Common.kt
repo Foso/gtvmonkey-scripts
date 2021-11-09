@@ -4,7 +4,6 @@ import kotlinx.browser.window
 import org.w3c.dom.HTMLElement
 import org.w3c.dom.get
 
-
 fun main() {
     helloWorld()
    // hideImages()

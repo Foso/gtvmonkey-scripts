@@ -2,6 +2,7 @@
 // @name        MyNew script - KotlinJs
 // @namespace   GtvMonkey Scripts
 // @grant       GM.xmlHttpRequest
+// @grant       GM.notification
 // @version     1.1
 // @author      -
 // @description 10/16/2020, 9:43:07 PM
