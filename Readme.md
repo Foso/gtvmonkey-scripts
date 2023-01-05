@@ -9,7 +9,7 @@ This a template project that helps you write Greasemonkey/Tampermonkey/ViolentMo
 ## How does it work?
 
 ### Gradle
-I configured a Gradle task [**buildUserScript**](https://github.com/Foso/gtvmonkey-scripts/blob/master/build.gradle#L42) that will generate a userscript file.
+I configured a Gradle task [**buildUserScript**](https://github.com/Foso/gtvmonkey-scripts/blob/2ae1766cad85e847c93ae4cab894898115f191e4/build.gradle.kts#L32) that will generate a userscript file.
 The task will concat the script metadata from <kbd>main/resources/metadata.txt</kbd>, the **kotlin.js** and your generated javascript file. 
 Then it will append **main();** to the script, which will execute the main() of your Kotlin Code.
 
