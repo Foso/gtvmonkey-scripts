@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("js") version "1.8.0"
+    kotlin("js") version "2.1.10"
 }
 
 group = "org.example"
